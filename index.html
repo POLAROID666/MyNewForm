@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <section>
+    <div class="container">
+      <form action="#">
+        <div class="step step-1 index active">
+          <h3>Этап первый</h3>
+          <div class="form-group">
+            <label for="OneLabel">Что такое утка</label>
+            <input type="text" id="firstName" name="firstName">
+          </div>
+          <div class="form-group">
+            <label for="OneLabel">Где они обитают</label>
+            <input type="text" id="OneLabel" name="OneLabel">
+          </div>
+          <button type="button" class="next-btn">Вперед</button>
+        </div>
+
+        <div class="step step-2 " >
+          <h3>Этап второй</h3>
+          <div class="form-group">
+            <label for="OneLabel">Когда стоит покупать зимную куртку</label>
+            <input type="text" id="OneLabel" name="OneLabel">
+          </div>
+          <div class="form-group">
+            <label for="OneLabel">Что такое покупка</label>
+            <input type="text" id="OneLabel" name="OneLabel">
+          </div>
+          <button type="button" class="previos-btn">Назад</button>
+          <button type="button" class="next-btn">Вперед</button>
+        </div>
+
+        <div class="step step-3 ">
+          <h3>Этап третий</h3>
+          <div class="form-group">
+            <label for="OneLabel">Я ничего не придумал</label>
+            <input type="text" id="OneLabel" name="OneLabel">
+          </div>
+          <div class="form-group">
+            <label for="OneLabel">Какие ананасы ты любишь</label> 
+            <input type="text" id="OneLabel" name="OneLabel">
+          </div>
+          <button type="button" class="previos-btn">Назад</button>
+          <button type="text" onclick="alert('На этом все можешь закрывать страницу')" class="end-btn">Закончить</button>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+<script src="app.js"></script>
+</body>
+</html>
