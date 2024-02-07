@@ -2,7 +2,7 @@ const steps = Array.from(document.querySelectorAll('form .step'))
 const nextBtn = document.querySelectorAll('form .next-btn')
 const prevBtn = document.querySelectorAll('form .previos-btn')
 const endBtn = document.querySelectorAll('form .end-btn')
-const form = document.querySelector('form')
+
 
 nextBtn.forEach(button=>{
     button.addEventListener('click', () => {
@@ -30,30 +30,39 @@ function changeStep(btn){
     console.log(index)
 }
 
-const inputElement = document.getElementById('DuckName')
+const inputs = document.querySelectorAll('input')
 const buttonCreate = document.getElementById('create')
 const stepElement = document.getElementById('step-4')
 
-console.log
+let data = {}
+
+inputs.forEach((input) => { 
+    input.addEventListener('change', () => {
+    data[input.name] = input.value
+    console.log(data)
+})
+})
+
+
 
 buttonCreate.onclick = function () {
     stepElement.innerHTML = `<div class="form-group">
     <label for="OneLabel">Что такое утка</label>
-    <span>${inputElement.value}</span>
+    <span>${data['DuckName']}</span>
     <div class="form-group">
     <label for="OneLabel">Где они обитают</label> 
-    <span></span>
+    <span>${data['DuckHere']}</span>
     <div class="form-group">
     <label for="OneLabel">Когда стоит покупать зимную куртку</label> 
-    <span></span>
+    <span>${data['ZimName']}</span>
     <div class="form-group">
     <label for="OneLabel">Что такое покупка</label> 
-    <span></span>
+    <span>${data['StoreName']}</span>
     <div class="form-group">
     <label for="OneLabel">Я ничего не придумал</label> 
-    <span></span>
+    <span>${data['UnderName']}</span>
     <div class="form-group">
     <label for="OneLabel">Какие ананасы ты любишь</label> 
-    <span></span>
+    <span>${data['AnanasName']}</span>
     </div>`
 }
